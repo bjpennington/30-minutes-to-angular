@@ -14,8 +14,17 @@
     <div ng-controller="FoodController as vm">
         <h1>30 Minutes to Angular</h1>
         <p>{{vm.message}}</p>
+        <h3>Tell me your favorite food:</h3>
         <input type="text" ng-model="vm.input">
+        <br>
+        <button ng-click="vm.addFood()">Add it!</button>
         <p>{{vm.input}}</p>
+        <div>
+            <h3>Favorite Foods List</h3>
+            <ul ng-repeat="food in vm.foodsArray">
+                <li>{{food}}</li>
+            </ul>
+        </div>
     </div>
 </body>
 
