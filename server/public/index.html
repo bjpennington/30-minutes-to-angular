@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>30 Minutes to Angular</title>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="vendors/angular.min.js"></script>
     <script src="scripts/client.js"></script>
 </head>
 
-<body ng-app="FoodApp">
+<body class="container-fluid" ng-app="FoodApp">
     <div ng-controller="FoodController as vm">
         <h1>30 Minutes to Angular</h1>
         <p>{{vm.message}}</p>
         <h3>Tell me your favorite food:</h3>
         <input type="text" ng-model="vm.input">
         <br>
-        <button ng-click="vm.addFood()">Add it!</button>
+        <button class="btn-primary" ng-click="vm.addFood()">Add it!</button>
         <p>{{vm.input}}</p>
         <div>
-            <h3>Favorite Foods List</h3>
+            <h3>Favorite Foods List:</h3>
             <ul ng-repeat="food in vm.foodsArray">
                 <li>{{food}}</li>
             </ul>
